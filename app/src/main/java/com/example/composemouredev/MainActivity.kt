@@ -4,9 +4,7 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.Image
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.*
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
@@ -36,7 +34,8 @@ fun MyComponentAsRow() {
 fun MyTexts(text: String) {
     Column(modifier = Modifier.padding(horizontal = 8.dp)) {
         Text(text)
-        Text("Te amamos con el alma", Modifier.padding(vertical = 4.dp))
+        Spacer(Modifier.height(16.dp))
+        Text("Te amamos con el alma")
     }
 }
 
