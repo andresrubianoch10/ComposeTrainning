@@ -12,18 +12,19 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            MyText("Hello, Emi!")
+            MyTexts("Hello, Emi!")
         }
     }
 
     @Composable
-    fun MyText(text: String) {
+    fun MyTexts(text: String) {
         Text(text)
+        Text("Te amamos con el alma")
     }
 
     @Preview
     @Composable
     fun PreviewTexts() {
-        MyText(text = "Hello, Emi.")
+        MyTexts(text = "Hello, Emi.")
     }
 }
