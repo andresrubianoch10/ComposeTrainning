@@ -6,10 +6,13 @@ import androidx.activity.compose.setContent
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.padding
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.dp
 
 class MainActivity : ComponentActivity() {
 
@@ -23,7 +26,7 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun MyComponentAsRow() {
-    Row {
+    Row(modifier = Modifier.padding(8.dp)) {
         MyImage()
         MyTexts(text = "Hello, Emi")
     }
@@ -31,9 +34,9 @@ fun MyComponentAsRow() {
 
 @Composable
 fun MyTexts(text: String) {
-    Column {
+    Column(modifier = Modifier.padding(horizontal = 8.dp)) {
         Text(text)
-        Text("Te amamos con el alma")
+        Text("Te amamos con el alma", Modifier.padding(vertical = 4.dp))
     }
 }
 
