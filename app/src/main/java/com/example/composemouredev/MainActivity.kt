@@ -29,11 +29,22 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun MyComponentAsRow() {
     Row(modifier = Modifier.padding(8.dp)) {
-        MyImage()
-        MyTexts(text = "Hello, Emi")
+        Components()
     }
 }
 
+@Composable
+fun Components() {
+    MyImage()
+    MyTexts(text = "Hello, Emi")
+}
+
+@Composable
+fun MyComponentAsColumn() {
+    Column(modifier = Modifier.padding(8.dp)) {
+        Components()
+    }
+}
 @Composable
 fun MyTexts(text: String) {
     Column(modifier = Modifier.padding(horizontal = 8.dp)) {
@@ -57,6 +68,12 @@ fun MyImage() {
 
 @Preview
 @Composable
-fun PreviewTexts() {
+fun PreviewsRow() {
     MyComponentAsRow()
+}
+
+@Preview
+@Composable
+fun PreviewsColumn() {
+    MyComponentAsColumn()
 }
