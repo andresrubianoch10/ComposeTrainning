@@ -15,13 +15,29 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.example.composemouredev.ui.theme.ComposeMoureDevTheme
 
 class MainActivity : ComponentActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        mourseDev()
+        aristiDev()
+    }
+
+    private fun mourseDev() {
         setContent {
-            MyComponentAsRow()
+            ComposeMoureDevTheme {
+                MyComponentAsRow()
+            }
+        }
+    }
+
+    private fun aristiDev() {
+        setContent {
+            ComposeMoureDevTheme {
+                
+            }
         }
     }
 }
@@ -45,6 +61,7 @@ fun MyComponentAsColumn() {
         Components()
     }
 }
+
 @Composable
 fun MyTexts(text: String) {
     Column(modifier = Modifier.padding(horizontal = 8.dp)) {
