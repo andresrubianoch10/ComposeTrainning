@@ -1,7 +1,6 @@
 package com.example.composemouredev
 
 import android.os.Bundle
-import android.view.Surface
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.Image
@@ -70,8 +69,8 @@ fun MyComponentAsBox() {
     Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
         Box(
             modifier = Modifier
-                .width(100.dp)
-                .height(100.dp)
+                .width(200.dp)
+                .height(200.dp)
                 .background(Color.Cyan)
                 .verticalScroll(
                     rememberScrollState()
@@ -79,6 +78,16 @@ fun MyComponentAsBox() {
         ) {
             Components()
         }
+    }
+}
+
+@Composable
+fun MyComponentAsColumnByAristi() {
+    Column(Modifier.fillMaxSize()) {
+        Components()
+        Components()
+        Components()
+        Components()
     }
 }
 
@@ -119,4 +128,10 @@ fun PreviewsColumn() {
 @Composable
 fun PreviewsBox() {
     MyComponentAsBox()
+}
+
+@Preview(showBackground = true)
+@Composable
+fun PreviewColumnByAristi() {
+    MyComponentAsColumnByAristi()
 }
