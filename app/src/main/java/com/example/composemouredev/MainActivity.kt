@@ -84,10 +84,10 @@ fun MyComponentAsBox() {
 @Composable
 fun MyComponentAsColumnByAristi() {
     Column(Modifier.fillMaxSize()) {
-        Text("Ejemplo 1", modifier = Modifier.background(Color.Red))
-        Text("Ejemplo 2", modifier = Modifier.background(Color.Blue))
-        Text("Ejemplo 3", modifier = Modifier.background(Color.Green))
-        Text("Ejemplo 4", modifier = Modifier.background(Color.Cyan))
+        Text("Ejemplo 1", modifier = Modifier.background(Color.Red).weight(1f))
+        Text("Ejemplo 2", modifier = Modifier.background(Color.Blue).weight(1f))
+        Text("Ejemplo 3", modifier = Modifier.background(Color.Green).weight(1f))
+        Text("Ejemplo 4", modifier = Modifier.background(Color.Cyan).weight(1f))
     }
 }
 
