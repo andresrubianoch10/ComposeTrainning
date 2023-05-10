@@ -5,11 +5,13 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
@@ -83,11 +85,11 @@ fun MyComponentAsBox() {
 
 @Composable
 fun MyComponentAsColumnByAristi() {
-    Column(Modifier.fillMaxSize()) {
-        Text("Ejemplo 1", modifier = Modifier.background(Color.Red).weight(1f))
-        Text("Ejemplo 2", modifier = Modifier.background(Color.Blue).weight(1f))
-        Text("Ejemplo 3", modifier = Modifier.background(Color.Green).weight(1f))
-        Text("Ejemplo 4", modifier = Modifier.background(Color.Cyan).weight(1f))
+    Column(Modifier.fillMaxSize(), verticalArrangement = Arrangement.SpaceBetween) {
+        Text("Ejemplo 1", modifier = Modifier.background(Color.Red).fillMaxWidth().height(100.dp))
+        Text("Ejemplo 2", modifier = Modifier.background(Color.Blue).fillMaxWidth().height(100.dp))
+        Text("Ejemplo 3", modifier = Modifier.background(Color.Green).fillMaxWidth().height(100.dp))
+        Text("Ejemplo 4", modifier = Modifier.background(Color.Cyan).fillMaxWidth().height(100.dp))
     }
 }
 
