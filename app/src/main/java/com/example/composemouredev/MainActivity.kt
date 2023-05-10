@@ -75,6 +75,11 @@ fun MyComponentAsColumn() {
 }
 
 @Composable
+fun MySpacer(space: Int) {
+    Spacer(modifier = Modifier.height(space.dp))
+}
+
+@Composable
 fun MyComponentAsBox() {
     Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
         Box(
@@ -117,7 +122,7 @@ fun MyComponentAsColumnByAristi() {
 fun MyTexts(text: String) {
     Column(modifier = Modifier.padding(horizontal = 8.dp)) {
         Text(text)
-        Spacer(Modifier.height(16.dp))
+        MySpacer(16)
         Text("Te amamos con el alma")
     }
 }
