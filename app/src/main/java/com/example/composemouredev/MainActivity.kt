@@ -5,6 +5,7 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
+import androidx.compose.foundation.horizontalScroll
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -48,7 +49,14 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun MyComponentAsRow() {
-    Row(modifier = Modifier.padding(8.dp)) {
+    Row(modifier = Modifier
+        .padding(8.dp)
+        .horizontalScroll(rememberScrollState())) {
+        Components()
+        Components()
+        Components()
+        Components()
+        Components()
         Components()
     }
 }
@@ -86,10 +94,22 @@ fun MyComponentAsBox() {
 @Composable
 fun MyComponentAsColumnByAristi() {
     Column(Modifier.fillMaxSize(), verticalArrangement = Arrangement.SpaceBetween) {
-        Text("Ejemplo 1", modifier = Modifier.background(Color.Red).fillMaxWidth().height(100.dp))
-        Text("Ejemplo 2", modifier = Modifier.background(Color.Blue).fillMaxWidth().height(100.dp))
-        Text("Ejemplo 3", modifier = Modifier.background(Color.Green).fillMaxWidth().height(100.dp))
-        Text("Ejemplo 4", modifier = Modifier.background(Color.Cyan).fillMaxWidth().height(100.dp))
+        Text("Ejemplo 1", modifier = Modifier
+            .background(Color.Red)
+            .fillMaxWidth()
+            .height(100.dp))
+        Text("Ejemplo 2", modifier = Modifier
+            .background(Color.Blue)
+            .fillMaxWidth()
+            .height(100.dp))
+        Text("Ejemplo 3", modifier = Modifier
+            .background(Color.Green)
+            .fillMaxWidth()
+            .height(100.dp))
+        Text("Ejemplo 4", modifier = Modifier
+            .background(Color.Cyan)
+            .fillMaxWidth()
+            .height(100.dp))
     }
 }
 
