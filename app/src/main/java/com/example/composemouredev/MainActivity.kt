@@ -68,7 +68,6 @@ fun MyComponentAsBox() {
     Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
         Box(
             modifier = Modifier
-                .width(50.dp)
                 .background(Color.Cyan)
         ) {
             Components()
