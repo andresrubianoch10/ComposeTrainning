@@ -23,7 +23,7 @@ fun MyStateExample() {
         Button(onClick = { counter.value += 1 }) {
             Text(text = "Pulsar")
         }
-        Text(text = "He sido pulsado $counter veces")
+        Text(text = "He sido pulsado ${counter.value} veces")
     }
 }
 
