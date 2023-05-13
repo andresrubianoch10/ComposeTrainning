@@ -41,7 +41,8 @@ class MainActivity : ComponentActivity() {
     private fun mourseDev() {
         setContent {
             ComposeMoureDevTheme {
-                MyComponentAsRow()
+//                MyComponentAsRow()
+                MyStateExample()
             }
         }
     }
@@ -162,3 +163,5 @@ fun PreviewsBox() {
 fun PreviewColumnByAristi() {
     MyComponentAsColumnByAristi()
 }
+
+
